@@ -17,10 +17,12 @@ from django.contrib import admin
 from django.urls import path, include
 from django.urls import re_path
 
+
 from facebook_setup.views import MyView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('accounts/', include('django.contrib.auth.urls')),
     re_path(r'^auth/', include('drf_social_oauth2.urls', namespace='drf')),
     re_path('read/', MyView.as_view(), name='read'),
 ]

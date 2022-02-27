@@ -13,7 +13,7 @@ import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
+BASE_DIR = Path(__file__).resolve(strict=True).parent
 
 
 # Quick-start development settings - unsuitable for production
@@ -26,8 +26,15 @@ SECRET_KEY = '6y8#uvoj2w+43myrd8wifi(1#96%7_ps8qsu69f4#f+8%@n11p'
 DEBUG = True
 ACTIVATE_JWT = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'localhost',
+    'robertofd1995-facebook-setup-695r7v67cr7pp-8000.githubpreview.dev'
+]
 
+CSRF_TRUSTED_ORIGINS = [
+    'http://localhost',
+    'https://robertofd1995-facebook-setup-695r7v67cr7pp-8000.githubpreview.dev' 
+]
 
 # Application definition
 
@@ -76,6 +83,8 @@ TEMPLATES = [
         },
     },
 ]
+
+LOGIN_REDIRECT_URL = '/'
 
 AUTHENTICATION_BACKENDS = (
     # # Facebook OAuth2
@@ -140,7 +149,7 @@ WSGI_APPLICATION = 'facebook_setup.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.sqlite3',
         'NAME': 'db',
         'HOST': '127.0.0.1',
         'PORT': 3333,

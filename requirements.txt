@@ -1,7 +1,7 @@
 Django==4.0
 django-oauth-toolkit==1.5.0
 djangorestframework==3.13.1
-drf-social-oauth2 @ git+ssh://git@github.com/wagnerdelima/drf-social-oauth2.git@872efdc49aaa3e0bf235b6c66bfa2f3151ce055a
+drf-social-oauth2==1.2.1
 MarkupSafe==2.0.1
 oauthlib==3.1.1
 psycopg2-binary==2.9.2

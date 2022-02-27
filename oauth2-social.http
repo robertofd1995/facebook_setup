@@ -1,0 +1,7 @@
+
+# Social Login with Google
+
+POST https://robertofd1995-facebook-setup-695r7v67cr7pp-8000.githubpreview.dev/auth/token
+content-type: application/json
+
+### https://localhost/read/

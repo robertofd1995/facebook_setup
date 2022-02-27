@@ -1,0 +1,40 @@
+### 1) 
+### User A will go into our website, it will try to log in, in order to do it we will do the following call
+### localhost/auth/authorize/?response_type=code&client_id=seZDLntVbEeO7rHafawYAliITf3Y4maHtc3tqeLf&redirect_uri=https://robertofd1995-facebook-setup-695r7v67cr7pp-8000.githubpreview.dev/noexist/callback
+
+# Copy and paste into the browser the following url
+https://localhost/auth/authorize/?response_type=code&client_id=seZDLntVbEeO7rHafawYAliITf3Y4maHtc3tqeLf&redirect_uri=https://robertofd1995-facebook-setup-695r7v67cr7pp-8000.githubpreview.dev/noexist/callback
+
+### 2) User logs in, it will write it's username and password
+
+### 3) User is requested by permission, letting it know that it will give access to X (defined in the scope) information to the website
+
+### 4) After the user approbes, a callback will be made to the redirect_uri
+### with the authentication code, e.x http://localhost/noexist/callback?code=tdRMOXb677gFdd3j2fph2erLYApvgx
+
+### 5) Interchange the accauthentication code, for a token with the following call
+POST https://localhost/auth/token
+content-type: application/json
+
+{
+            "client_id": "seZDLntVbEeO7rHafawYAliITf3Y4maHtc3tqeLf",
+            "grant_type": "authorization_code",
+            "state": "random_state_string",
+            "code": "Sb0NP5Zpo9LN9go8UCEFX7ZkmkKgBD",
+            "redirect_uri": "http://localhost/noexist/callback"
+}
+
+### The previous call will return the token and refresh_token
+
+# Now we can use the requested token to access to endpoints that require authentication,
+# Just add in the header of the request 
+# "Authentication" "Bearer XXX_token_XXX"
+
+# That's it!!!
+
+# Social Login with Google
+
+POST https://robertofd1995-facebook-setup-695r7v67cr7pp-8000.githubpreview.dev/auth/token
+content-type: application/json
+
+### https://localhost/read/

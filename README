@@ -1,0 +1,47 @@
+# What is this project?
+
+This project is just for learning purposes related to OAuth2, 
+is a fork from https://github.com/wagnerdelima/facebook_setup
+
+The objective of this is to create a OAuth2 provider that can be consume by external clients (other servers, SPA webs, server side webs)
+
+To learn more about OAuth topic check the following resources:
+https://www.oauth.com/
+https://docs.authlib.org/en/latest/oauth/index.html
+
+For OAuth to work, this project is making use of the following libraries 
+
+drf-social-oauth2 -> django-oauth-toolkit
+                  -> python-social-auth
+
+
+# How does it work?
+
+In this case I wanted to simulate that the OAuth2 provider will be used by a SPA web
+
+As the SPA web is a public client (we cannot trust to have or share secrets with this side) we need to
+use the authentication-code grant type (ref: https://docs.authlib.org/en/latest/specs/rfc6749.html#authlib.oauth2.rfc6749.grants.AuthorizationCodeGrant)
+
+First of all we need to create a OAuth Client (In django-oauth-toolkit is call Application) in the django admin panel, add this in redirect_urls (substitue domain for your domain in use):
+
+https://robertofd1995-facebook-setup-695r7v67cr7pp-8000.githubpreview.dev/noexist/callback
+
+
+It will be used later on in the example, set it as public and authenticated_code as type, copy and paste  clietn_id and client_secrets, then Check OAuth2.http to see how it continues
+
+
+After checking and undertanding how OAuth2.http you can continue with oauth2-social.http to check how can you login with google and exchange it's token with your application access token
+
+
+# TODOS
+
+1 ) Social login with Google
+
+2) Ask user only once the credentials
+See: https://django-oauth-toolkit.readthedocs.io/en/latest/advanced_topics.html#skip-authorization-form
+
+I should use approval_prompt with auto
+
+3) Improve security by PKCE
+
+
