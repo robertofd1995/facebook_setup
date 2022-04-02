@@ -87,6 +87,8 @@ TEMPLATES = [
 LOGIN_REDIRECT_URL = '/'
 
 AUTHENTICATION_BACKENDS = (
+    # Google OAuth2
+    'social_core.backends.google.GoogleOAuth2',
     # # Facebook OAuth2
     'social_core.backends.facebook.FacebookAppOAuth2',
     'social_core.backends.facebook.FacebookOAuth2',
@@ -139,6 +141,16 @@ SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
 
 SOCIAL_AUTH_FACEBOOK_API_VERSION = '2.10'
 SOCIAL_AUTH_ORCID_API_VERSION = 'V3'
+
+# Google configuration
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = "172364616116-lej4coqpnt1v8978ot3om99asah8pi1t.apps.googleusercontent.com"
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = "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"
+
+# Define SOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE to get extra permissions from Google.
+SOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = [
+    'https://www.googleapis.com/auth/userinfo.email',
+    'https://www.googleapis.com/auth/userinfo.profile',
+]
 
 WSGI_APPLICATION = 'facebook_setup.wsgi.application'
 

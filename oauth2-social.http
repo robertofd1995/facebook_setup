@@ -5,3 +5,20 @@ POST https://robertofd1995-facebook-setup-695r7v67cr7pp-8000.githubpreview.dev/a
 content-type: application/json
 
 ### https://localhost/read/
+
+### Request user permissions
+https://accounts.google.com/o/oauth2/v2/auth?response_type=code&prompt=consent&access_type=offline&redirect_uri=https://robertofd1995-facebook-setup-695r7v67cr7pp-8000.githubpreview.dev/noexist/callback&client_id=172364616116-lej4coqpnt1v8978ot3om99asah8pi1t.apps.googleusercontent.com&https://accounts.google.com/o/oauth2/v2/auth?redirect_uri=https://developers.google.com/oauthplayground&prompt=consent&response_type=code&client_id=172364616116-lej4coqpnt1v8978ot3om99asah8pi1t.apps.googleusercontent.com&scope=https://www.googleapis.com/auth/calendar+https://www.googleapis.com/auth/userinfo.email+https://www.googleapis.com/auth/userinfo.profile&access_type=offline
+
+
+### Convert token in Django
+
+POST https://robertofd1995-facebook-setup-695r7v67cr7pp-8000.githubpreview.dev/auth/convert-token/
+content-type: application/json
+
+{
+            "client_id": "seZDLntVbEeO7rHafawYAliITf3Y4maHtc3tqeLf",
+            "grant_type": "convert_token",
+            "backend": "google-oauth2",
+            "token": "4/0AX4XfWhZRL-N3pGvSlJOIWlfGkePLx_sfpmXWcW_Vk11XFVyYQJL7_BgOdIcj23zOOaASw",
+            "redirect_uri": "https://robertofd1995-facebook-setup-695r7v67cr7pp-8000.githubpreview.dev/noexist/callback"
+}
