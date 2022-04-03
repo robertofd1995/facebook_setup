@@ -28,12 +28,14 @@ ACTIVATE_JWT = True
 
 ALLOWED_HOSTS = [
     'localhost',
-    'robertofd1995-facebook-setup-695r7v67cr7pp-8000.githubpreview.dev'
+    'robertofd1995-facebook-setup-695r7v67cr7pp-8000.githubpreview.dev',
+    'oauth-test.onrender.com'
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     'http://localhost',
-    'https://robertofd1995-facebook-setup-695r7v67cr7pp-8000.githubpreview.dev' 
+    'https://robertofd1995-facebook-setup-695r7v67cr7pp-8000.githubpreview.dev',
+    'oauth-test.onrender.com'
 ]
 
 # Application definition
