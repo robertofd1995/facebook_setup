@@ -24,18 +24,22 @@ SECRET_KEY = '6y8#uvoj2w+43myrd8wifi(1#96%7_ps8qsu69f4#f+8%@n11p'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+
+DRFSO2_URL_NAMESPACE="social"
 ACTIVATE_JWT = True
 
 ALLOWED_HOSTS = [
     'localhost',
     'robertofd1995-facebook-setup-695r7v67cr7pp-8000.githubpreview.dev',
-    'oauth-test.onrender.com'
+    'oauth-test.onrender.com',
+    '*'
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     'http://localhost',
     'https://robertofd1995-facebook-setup-695r7v67cr7pp-8000.githubpreview.dev',
-    'oauth-test.onrender.com'
+    'https://oauth-test.onrender.com',
+    '*'
 ]
 
 # Application definition

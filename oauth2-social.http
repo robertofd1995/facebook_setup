@@ -19,6 +19,27 @@ content-type: application/json
             "client_id": "seZDLntVbEeO7rHafawYAliITf3Y4maHtc3tqeLf",
             "grant_type": "convert_token",
             "backend": "google-oauth2",
-            "token": "4/0AX4XfWhZRL-N3pGvSlJOIWlfGkePLx_sfpmXWcW_Vk11XFVyYQJL7_BgOdIcj23zOOaASw",
+            "token": "ya29.A0ARrdaM-gVWPtVvjr-J1Fx1ixwEXiLK02sSBlKsEQTXz6ogUCQvzQunL67P3hxLlNpMhkeqg3QBcyxPR1pEi86fIW8sHmFqxNQ3UX-qzcjoRpvA8z0bw5--U5vVddDv8C2cWWzsuR_QM4C4Pv1LYPIGHCAYFS",
             "redirect_uri": "https://robertofd1995-facebook-setup-695r7v67cr7pp-8000.githubpreview.dev/noexist/callback"
 }
+
+
+POST https://robertofd1995-facebook-setup-695r7v67cr7pp-8000.githubpreview.dev/auth/convert-token/
+content-type: application/json
+
+{
+            "client_id": "ESMO0faW8K3mCguBDS4dLExs3vkzguF4nI4b88KX",
+            "client_secret": "LwQCn9xauptDyEoct9ON2bOXuAhzH3meEb5p4zpUa6FEg8DqhEQxZjyB48Seg5t2wF595gUYklQMtDlcCr5gEABeTWPZ7UG7NmG9EvTpED5d8tLkr1sGa2Wa4GIzIurn",
+            "grant_type": "convert_token",
+            "backend": "google-oauth2",
+            "token": "ya29.A0ARrdaM-gVWPtVvjr-J1Fx1ixwEXiLK02sSBlKsEQTXz6ogUCQvzQunL67P3hxLlNpMhkeqg3QBcyxPR1pEi86fIW8sHmFqxNQ3UX-qzcjoRpvA8z0bw5--U5vVddDv8C2cWWzsuR_QM4C4Pv1LYPIGHCAYFS"
+}
+
+
+
+
+# request to redirect user to provide credentials
+https://robertofd1995-facebook-setup-695r7v67cr7pp-8000.githubpreview.dev/auth/login/google-oauth2/
+
+# tengo que hacer trampa y coger la url antes de que la redirecione, mirar porque
+https://accounts.google.com/o/oauth2/auth?client_id=172364616116-lej4coqpnt1v8978ot3om99asah8pi1t.apps.googleusercontent.com&redirect_uri=http://robertofd1995-facebook-setup-695r7v67cr7pp-8000.githubpreview.dev/auth/complete/google-oauth2/&state=jfTf2rxuTD8PvTwTLYXRSmoeYn2n0MbU&response_type=code&scope=https://www.googleapis.com/auth/userinfo.email+https://www.googleapis.com/auth/userinfo.profile+openid+email+profile
