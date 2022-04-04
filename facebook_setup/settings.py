@@ -32,14 +32,14 @@ ALLOWED_HOSTS = [
     'localhost',
     'robertofd1995-facebook-setup-695r7v67cr7pp-8000.githubpreview.dev',
     'oauth-test.onrender.com',
-    '*'
+    'test-oauth-robfd.herokuapp.com'
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     'http://localhost',
-    'https://robertofd1995-facebook-setup-695r7v67cr7pp-8000.githubpreview.dev',
+    'http://robertofd1995-facebook-setup-695r7v67cr7pp-8000.githubpreview.dev',
     'https://oauth-test.onrender.com',
-    '*'
+    'https://test-oauth-robfd.herokuapp.com'
 ]
 
 # Application definition
