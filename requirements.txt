@@ -32,3 +32,8 @@ social-auth-core==4.1.0
 sqlparse==0.4.2
 urllib3==1.26.8
 wrapt==1.13.3
+## The following requirements were added by pip freeze:
+dj-database-url==0.5.0
+django-heroku==0.3.1
+psycopg2==2.9.3
+whitenoise==6.0.0
